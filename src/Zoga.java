@@ -32,6 +32,7 @@ public class Zoga {
 		}
 		if (this.trkZLoparjem()) {
 			this.yPremik = -1;
+			igra.povecajTocke();
 		}
 
 		this.x += xPremik;
