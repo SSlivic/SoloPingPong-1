@@ -14,7 +14,7 @@ public class Igra extends JPanel {
 
 	Zoga zoga = new Zoga(this);
 	Lopar lopar = new Lopar(this);
-	
+
 	private int tocke = 0;
 
 	public Igra() {
@@ -49,8 +49,10 @@ public class Igra extends JPanel {
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
 		zoga.narisi(g2d);
-		lopar.narisi(g2d);
 		
+		g2d.setColor(Color.BLUE);
+		lopar.narisi(g2d);
+
 		g2d.setColor(Color.RED);
 		g2d.setFont(new Font("Verdana", Font.BOLD, 30));
 		g2d.drawString(String.valueOf(this.tocke), 10, 30);
@@ -60,7 +62,7 @@ public class Igra extends JPanel {
 		JOptionPane.showMessageDialog(this, "Konec igre!");
 		System.exit(0);
 	}
-	
+
 	public void povecajTocke() {
 		this.tocke++;
 	}
